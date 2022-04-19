@@ -177,3 +177,16 @@ print(f"range: {numbers.max() - numbers.min()}")
 #    bins and output how many values fall into each bin.
 
 print(f"Values in each bin: {numbers.value_counts(bins=4)}")
+
+# 14 Plot the binned data in a meaningful way. Be sure to 
+#    include a title and axis labels.
+
+numbers.value_counts(bins=4).plot.bar()
+number_bins = numbers.value_counts(bins=4)
+print(4789988.16-3592560.777)
+print(2395133.385 - 1197705.993)
+plt.title('Distribution of Values in Numbers Series')
+plt.xticks(rotation=45)
+plt.xlabel('Number Ranges')
+plt.ylabel('Frequency')
+plt.show()
