@@ -2,6 +2,12 @@ from env import get_db_url
 import numpy as np
 from pydataset import data
 import pandas as pd
+
+""" 
+CHANGE BRANCH VALUE TO WHICHEVER EXERCISE PT YOU WANT TO SEE, EX: EXERCISE PT 1 = 'PT1' 
+Did this to limit the amount of querying and the time it takes to do so.
+"""
+
 branch = 'PT3'
 ############################ Exercise PT 1 ###############################
 if branch == 'PT1':
@@ -234,7 +240,7 @@ if branch == 'PT2':
 
 
 
-############################ Exercise PT 1 ###############################
+############################ Exercise PT 3 ###############################
 
 if branch == 'PT3':
 
@@ -248,8 +254,8 @@ if branch == 'PT3':
     # 2) What is the total price for each order?
 
     chipotle.item_price = chipotle.item_price.str.replace('$', '').astype('float')
-
     print(chipotle.groupby('order_id').item_price.sum())
+
 
     # with a pivot_table
     print(chipotle.pivot_table(index='order_id', values='item_price', aggfunc='sum'))
